@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Princess+Sofia&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JQuery Load -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CSS Load -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- My Script Load -->
+    <script src="js/index.js"></script>
+
+    <audio id="background-audio">
+      <source src="silenttnight.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+    
+    <button id="play-button">Play Music</button>
+    
+    <script>
+      document.getElementById("play-button").addEventListener("click", function () {
+        const audio = document.getElementById("background-audio");
+        audio.play(); // 버튼 클릭 시 오디오 재생
+      });
+
+    </script>
+    </script>
+    </body>
+  </head>
+  <body>
+
+    <img src="images/talk.png" alt="Background Image" class="talk-image" />
+    <img src="images/letter.png" alt="Background Image" class="letter-image" />
+    <img src="images/babysnow.png" alt="Background Image" class="babysnow-image" />
+    <img src="images/house.png" alt="Background Image" class="house-image" />
+    <img src="images/20.png" alt="Background Image" class="twenty-image" />
+    <img src="images/21.png" alt="Background Image" class="twentyone-image" />
+    <img src="images/22.png" alt="Background Image" class="twentytwo-image" />
+    <img src="images/23.png" alt="Background Image" class="twentythree-image" />
+    <img src="images/24.png" alt="Background Image" class="twentyfour-image" />
+    <img src="images/25.png" alt="Background Image" class="twentyfive-image" />
+    <img src="images/present.png" alt="Background Image" class="present-image" />
+    <img src="images/cocoa.png" alt="Background Image" class="cocoa-image" />
+    <img src="images/socks.png" alt="Background Image" class="socks-image" />
+    <img src="images/sockss.png" alt="Background Image" class="sockss-image" />
+    <img src="images/socksss.png" alt="Background Image" class="socksss-image" />
+    <img src="images/cookies.png" alt="Background Image" class="cookies-image" />
+    <img src="images/cookie.png" alt="Background Image" class="cookie-image" id="cookieImage" alt="Cookie Image" />
+    <img src="images/foot.png" alt="Background Image" class="foot-image" id="footImage" alt="Foot Image" />
+<!-- 클릭 횟수를 추적할 hidden input -->
+<input type="hidden" id="clickCount" value="0" />
+    <img src="images/santa.png" alt="Background Image" class="santa-image" />
+    <div class="snow-container"></div>
+    <div class="text-container"> </div>
+    <p class="font-style-1" id="neon-text">MERRY CHRISTMAS!</b>
+    <p class="font-style-2">🎄</b>
+
+      <img src="images/letter.png" alt="Original Image" class="letter-image" />
+<!-- 클릭 후 표시될 이미지 -->
+<div id="popup-container" class="hidden">
+  <img src="images/dearsanta.png" alt="Popup Image" id="popup-image" />
+</div>
+  </body>
+</html>

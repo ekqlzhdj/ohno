@@ -1,0 +1,373 @@
+body {
+  background-image: url("images/background.png"); /* 배경 이미지 경로 */
+  background-size: cover; /* 이미지가 화면을 가득 채우도록 설정 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
+  background-position: center; /* 이미지 위치를 중앙으로 설정 */
+}
+
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* 화면 너비 */
+  height: 100vh; /* 화면 높이 */
+  pointer-events: none; /* 클릭 이벤트 방지 */
+  z-index: 1000;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 1rem; /* 기본 눈송이 크기 */
+  opacity: 0.8; /* 투명도 */
+  animation: fall linear infinite; /* 애니메이션 */
+}
+
+/* 눈송이가 떨어지는 애니메이션 */
+@keyframes fall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh); /* 화면 아래로 이동 */
+    opacity: 0;
+  }
+}
+
+.house-image {
+  position: absolute; /* 부모 요소 기준으로 위치 */
+  bottom: 0; /* 화면 아래쪽에 맞춤 */
+  left: 50%; /* 수평 중앙 정렬 */
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 2;
+}
+
+.twenty-image {
+  position: absolute;
+  top: 416px;
+  left: 434px;
+  transform: translateX(-50%) rotateY(0deg); /* 기본 상태는 회전하지 않음 */
+  transform-origin: left; /* 왼쪽을 기준으로 회전 */
+  perspective: 1000px; /* 3D 공간 효과 */
+  transition: transform 1s ease-in-out; /* 부드러운 애니메이션 */
+  object-fit: cover;
+  z-index: 100;
+}
+
+.twenty-image.hidden {
+  transform: translateX(-50%) rotateY(90deg); /* 클릭 시 90도 회전 */
+}
+
+.twentyone-image {
+  position: absolute;
+  top: 433px;
+  left: 820px;
+  transform: translateX(-50%) rotateY(0deg); /* 기본 상태는 회전하지 않음 */
+  transform-origin: left; /* 왼쪽을 기준으로 회전 */
+  perspective: 1000px; /* 3D 공간 효과 */
+  transition: transform 1s ease-in-out; /* 부드러운 애니메이션 */
+  object-fit: cover;
+  z-index: 100;
+}
+
+.twentyone-image.hidden {
+  transform: translateX(-50%) rotateY(90deg); /* 클릭 시 90도 회전 */
+}
+
+.twentytwo-image {
+  position: absolute;
+  top: 429px;
+  left: 1207px;
+  transform: translateX(-50%) rotateY(0deg); /* 기본 상태는 회전하지 않음 */
+  transform-origin: left; /* 왼쪽을 기준으로 회전 */
+  perspective: 1000px; /* 3D 공간 효과 */
+  transition: transform 1s ease-in-out; /* 부드러운 애니메이션 */
+  object-fit: cover;
+  z-index: 100;
+}
+
+.twentytwo-image.hidden {
+  transform: translateX(-50%) rotateY(90deg); /* 클릭 시 90도 회전 */
+}
+
+.twentythree-image {
+  position: absolute;
+  top: 637px;
+  left: 434px;
+  transform: translateX(-50%) rotateY(0deg); /* 기본 상태는 회전하지 않음 */
+  transform-origin: left; /* 왼쪽을 기준으로 회전 */
+  perspective: 1000px; /* 3D 공간 효과 */
+  transition: transform 1s ease-in-out; /* 부드러운 애니메이션 */
+  object-fit: cover;
+  z-index: 100;
+}
+
+.twentythree-image.hidden {
+  transform: translateX(-50%) rotateY(90deg); /* 클릭 시 90도 회전 */
+}
+
+.twentyfour-image {
+  position: absolute;
+  top: 633px;
+  left: 823px;
+  transform: translateX(-50%) rotateY(0deg); /* 기본 상태는 회전하지 않음 */
+  transform-origin: left; /* 왼쪽을 기준으로 회전 */
+  perspective: 1000px; /* 3D 공간 효과 */
+  transition: transform 1s ease-in-out; /* 부드러운 애니메이션 */
+  object-fit: cover;
+  z-index: 100;
+}
+
+.twentyfour-image.hidden {
+  transform: translateX(-50%) rotateY(90deg); /* 클릭 시 90도 회전 */
+}
+
+.twentyfive-image {
+  position: absolute;
+  top: 637px;
+  left: 1208px;
+  transform: translateX(-50%) rotateY(0deg); /* 기본 상태는 회전하지 않음 */
+  transform-origin: left; /* 왼쪽을 기준으로 회전 */
+  perspective: 1000px; /* 3D 공간 효과 */
+  transition: transform 1s ease-in-out; /* 부드러운 애니메이션 */
+  object-fit: cover;
+  z-index: 100;
+}
+
+.twentyfive-image.hidden {
+  transform: translateX(-50%) rotateY(90deg); /* 클릭 시 90도 회전 */
+}
+
+.talk-image {
+  position: absolute;
+  top: 53%;
+  left: 29%;
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 50;
+}
+
+.letter-image {
+  position: absolute;
+  top: 54%;
+  left: 30%;
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 60;
+  animation: scale-bounce 2s ease-in-out infinite;
+}
+
+.present-image {
+  position: absolute;
+  top: 54%;
+  left: 46%;
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 50;
+  animation: scale-bounce 2s ease-in-out infinite;
+}
+
+/* 커졌다 작아졌다 효과 정의 */
+@keyframes scale-bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) scale(1); /* 원래 크기 */
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+
+.cocoa-image {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  z-index: 50;
+  animation: rotateImage 8s linear infinite;
+}
+
+@keyframes rotateImage {
+  0% {
+    transform: translateX(-50%) rotate(0deg); /* 시작 시 회전 각도 */
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg); /* 360도 회전 */
+  }
+}
+
+.socks-image {
+  position: absolute;
+  top: 74%;
+  left: 21%;
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 50;
+  animation: swing 3s ease-in-out infinite;
+}
+
+.sockss-image {
+  position: absolute;
+  top: 74%;
+  left: 26%;
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 50;
+  animation: swing 3s ease-in-out infinite;
+}
+
+.socksss-image {
+  position: absolute;
+  top: 72%;
+  left: 31%;
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 50;
+  animation: swing 3s ease-in-out infinite;
+}
+
+.santa-image {
+  position: absolute;
+  top: 76%;
+  left: 73%;
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 50;
+  animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: translateX(-50%) rotate(-10deg); /* 왼쪽으로 기울임 */
+  }
+  50% {
+    transform: translateX(-50%) rotate(10deg); /* 오른쪽으로 기울임 */
+  }
+  100% {
+    transform: translateX(-50%) rotate(-10deg); /* 다시 왼쪽으로 기울임 */
+  }
+}
+
+.cookies-image {
+  position: absolute;
+  top: 74%;
+  left: 53%;
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 50;
+}
+
+.cookie-image {
+  position: absolute;
+  top: 82%;
+  left: 50.5%;
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 55;
+}
+
+.foot-image {
+  position: absolute;
+  top: 80%;
+  left: 43%;
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 55;
+  opacity: 0; /* 처음에는 숨겨짐 */
+  transition: opacity 1s ease; /* 서서히 나타나는 효과 */
+}
+
+.babysnow-image {
+  position: absolute;
+  top: 34%;
+  left: 83%;
+  transform: translateX(-50%); /* 수평 중앙 보정 */
+  object-fit: cover;
+  z-index: 100;
+}
+
+.font-style-1 {
+  font-family: "Princess Sofia", cursive;
+  font-size: 70px;
+  color: white;
+  position: absolute;
+  top: 30px; /* 세로 위치는 여전히 자유롭게 조정 */
+  left: 50%; /* 화면 가로 중앙 */
+  transform: translateX(-50%); /* 가로 중앙 맞추기 */
+  letter-spacing: 10px;
+  white-space: nowrap; /* 한 줄로 유지 */
+  z-index: 10;
+  display: inline-block;
+  animation: neon 1.5s ease-in-out infinite, revealText 3s steps(20) forwards;
+}
+
+/* 네온사인 효과 */
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.3);
+    color: white;
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(228, 255, 255, 0.8),
+      0 0 30px rgba(227, 255, 255, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.3);
+    color: white;
+  }
+}
+
+/* 텍스트가 한 글자씩 나오는 애니메이션 */
+@keyframes revealText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.font-style-2 {
+  font-family: "Princess Sofia", cursive;
+  font-size: 10px;
+  color: white;
+  position: absolute;
+  top: 500px; /* 세로 위치는 여전히 자유롭게 조정 */
+  left: 50%; /* 화면 가로 중앙 */
+  z-index: 1;
+}
+
+/* 팝업 컨테이너 */
+#popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100; /* 화면 맨 위로 */
+  display: none; /* 초기 상태 숨김 */
+  padding: 0; /* 여백 제거 */
+  background-color: transparent; /* 배경 투명 */
+  border: none; /* 테두리 제거 */
+}
+
+/* 팝업 이미지 */
+#popup-image {
+  max-width: 90%;
+  max-height: 90%;
+  border: 2px solid white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 숨김 상태 제어 */
+.hidden {
+  display: none;
+}
